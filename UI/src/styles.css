@@ -1,0 +1,5 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+@import url('//db.onlinewebfonts.com/c/605c1c612570275f24508913462da771?family=Radikal');
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

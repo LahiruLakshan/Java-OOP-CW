@@ -1,0 +1,169 @@
+.spacer{
+  flex: 1 1 auto;
+}
+
+/*mat-icon{*/
+/*  background: linear-gradient(45deg, #c800ff, #00ffbd) ;*/
+
+/*  -webkit-text-fill-color: transparent;*/
+/*  -webkit-background-clip: text;  width: 25px;*/
+/*  height: 30px;*/
+/*  transform: scale(2.5);*/
+/*  !*border: 10px solid #6b1818;*!*/
+
+
+/*}*/
+@font-face {font-family: "Radikal"; src: url("//db.onlinewebfonts.com/t/605c1c612570275f24508913462da771.eot"); src: url("//db.onlinewebfonts.com/t/605c1c612570275f24508913462da771.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/605c1c612570275f24508913462da771.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/605c1c612570275f24508913462da771.woff") format("woff"), url("//db.onlinewebfonts.com/t/605c1c612570275f24508913462da771.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/605c1c612570275f24508913462da771.svg#Radikal") format("svg"); }
+.icon{
+  width: 70px;
+  color: black;
+  margin-left: 20px;
+
+}
+
+.icon-background{
+
+  margin: 0 auto;
+  background-color: white;
+  padding: 5px 10px 5px 20px;
+  border-radius: 0 50px 50px 0;
+}
+.title-shine{
+  font-family: "Radikal", serif;
+  font-size: 60px;
+  font-weight: bold;
+  /*border: 10px solid #8b4513;*/
+  margin: 12px;
+  /*-webkit-text-stroke: 2px #ffffff;*/
+  /*border: 2px solid #8b4513;*/
+  /*color: #ffffff;*/
+  /*text-shadow: 0 1px 0 transparent, 0 2px 0 transparent, 0 3px 0 transparent, 0 4px 0 transparent, 0 5px 0 transparent, 0 6px 0 transparent, 0 7px 0 transparent, 0 8px 0 transparent, 0 9px 0 transparent, 0 10px 10px rgba(0, 0, 0, 0.5);*/
+  background-color: #ffffff;
+  background-image: linear-gradient(
+    -75deg,
+    transparent 0,
+    transparent 5%,
+    rgb(107, 102, 81) 5%,
+    rgb(126, 116, 81) 10%,
+    transparent 10%,
+  transparent 100%
+  );
+  animation: animate 4s linear infinite;
+  background-size: 200% 100%;
+  animation-direction: alternate;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+
+}
+@keyframes animate {
+  0%{
+    background-position: 700px;
+  }
+  25%{
+    background-position: 700px;
+  }
+  50%{
+    background-position: 700px;
+  }
+  75%{
+    background-position: 700px;
+  }
+  100%{
+    background-position: -50px;
+  }
+}
+.title-shine:hover{
+  background-position: -120% 0;
+}
+
+
+
+.mat-toolbar{
+  /*background: linear-gradient(45deg, #38003c, #38003c, #38003c) !important;*/
+  background: linear-gradient(90deg, #ffffff 5%, #38003c 5%, #38003c 5%, #38003c 10%);
+  /*font-size: %;*/
+  /*background-color:  #38003c;*/
+  height: 100px;
+  /*box-shadow: 0 3px 1rem rgba(255, 255, 255, 0.7);*/
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+
+  justify-content: space-between;
+}
+
+
+.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+}
+
+.hover-border{
+
+  height: 100%;
+  color: #ffffff;
+  font-size: 25px;
+  width: 200px;
+
+
+}
+.hover-border:hover{
+  color: white;
+  width: 200px;
+  /*background-color: #c800ff;*/
+}
+.hover-border::after{
+  content: '';
+  background: red;
+  width: 0%;
+  height: 4px;
+  background: linear-gradient(45deg, #ff00f2, #6a00ff) !important;
+
+  background: -webkit-linear-gradient(to left,#FAFFD1, #A1FFCE);
+  background: linear-gradient(to left,#FAFFD1, #A1FFCE);
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  border-radius: 10px;
+  transition: all 500ms ease;
+
+}
+
+.hover-border:hover::after{
+  left: 0%;
+  width: 100%;
+
+}
+
+.align{
+  font-family: Radikal, serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+.shine{
+  overflow: hidden;
+}
+.shine::before{
+  content: "";
+  /*height: 300%;*/
+  /*width: 10%;*/
+  height: 200px;
+  width: 150px;
+  background-color: #1e0021;
+  /*background: rgba(0, 0, 0, 0.5);*/
+  position: absolute;
+  top: 0px;
+  left: 25px;
+  /*transform: translateX(-500px) rotate(20deg);*/
+  transform: translateY(80px) rotate(90deg);
+  transition: all .5s;
+}
+
+.shine:hover::before{
+  /*transform: translateX(500px) rotate(20deg);*/
+  transform: translateY(-30px) rotate(90deg);
+}

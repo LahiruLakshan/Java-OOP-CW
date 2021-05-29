@@ -1,0 +1,123 @@
+<body>
+    <div class="headerLine">
+      <h1>Matches Table</h1>
+    </div>
+    <div class="searchSort">
+      <div class="textBox">
+        <mat-form-field class="example-form-field">
+          <mat-label>Date Search</mat-label>
+          <label>
+            <input matInput (keyup)="applyFilter($event)" placeholder="YYYY-MM-DD" #input (focus)="dateFilter('matchDate')" [(ngModel)]="searchValue">
+          </label>
+          <button type="button" mat-button *ngIf="searchValue" matSuffix mat-icon-button aria-label="Clear" >
+              <mat-icon>search</mat-icon>
+          </button>
+        </mat-form-field>
+      </div>
+      <div class="sortBtn">
+        <a class="create-btn"  (click)="sortByDate()" mat-stroked-button>Sort By Date</a>
+      </div>
+    </div>
+    <div class="table-size example-container mat-elevation-z8">
+      <table mat-table [dataSource]="matchData" class="mat-elevation-z8 table-hover">
+        <ng-container matColumnDef="nameOfTheClub">
+          <th mat-header-cell *matHeaderCellDef> Home Team </th>
+          <td mat-cell *matCellDef="let element"> {{element.nameOfTheClub}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="stadium">
+          <th mat-header-cell *matHeaderCellDef> Stadium </th>
+          <td mat-cell *matCellDef="let element"> {{element.stadium}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="matchDate">
+          <th mat-header-cell *matHeaderCellDef> Match Date </th>
+          <td mat-cell *matCellDef="let element"> {{element.matchDate}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="otherTeamName">
+          <th mat-header-cell *matHeaderCellDef> Away Team </th>
+          <td mat-cell *matCellDef="let element"> {{element.otherTeamName}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="numOfGoalsScored">
+          <th mat-header-cell *matHeaderCellDef> Home Score </th>
+          <td mat-cell *matCellDef="let element"> {{element.numOfGoalsScored}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="numOfGoalsReceived">
+          <th mat-header-cell *matHeaderCellDef> Away Score </th>
+          <td  mat-cell *matCellDef="let element"> {{element.numOfGoalsReceived}} </td>
+        </ng-container>
+
+
+        <tr mat-header-row *matHeaderRowDef="matchColumns; sticky: true"></tr>
+        <tr mat-row *matRowDef="let row; columns: matchColumns;"></tr>
+        <tr class="mat-row" *matNoDataRow>
+          <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
+        </tr>
+      </table>
+
+    </div>
+    <footer class="footer" >
+
+      <div class="icon-title">Follow Us</div>
+      <div class="wrapper">
+        <div class="button">
+          <div class="icon">
+            <a class="them" href="https://www.facebook.com/premierleague/">
+            <i class="fab fa-facebook-f"></i>
+            </a>
+          </div>
+          <span>Facebook</span>
+        </div>
+        <div class="button">
+          <div class="icon">
+            <a class="them" href="https://twitter.com/premierleague?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor">
+            <i class="fab fa-twitter"></i>
+            </a>
+          </div>
+          <span>Twitter</span>
+        </div>
+
+
+        <div  class="button">
+          <div class="icon">
+            <a class="them" href="https://www.instagram.com/premierleague/">
+            <i  class="fab fa-instagram"></i>
+            </a>
+          </div>
+          <span>Instagram</span>
+        </div>
+
+
+        <div class="button">
+          <div class="icon">
+            <a class="them" href="https://www.premierleague.com/communities">
+            <i class="fab fa-google"></i>
+            </a>
+          </div>
+          <span>Google</span>
+        </div>
+
+
+        <div class="button">
+          <div class="icon">
+            <a class="them" href="https://www.youtube.com/channel/UCG5qGWdu8nIRZqJ_GgDwQ-w">
+            <i class="fab fa-youtube"></i>
+            </a>
+          </div>
+          <span>YouTube</span>
+        </div>
+      </div>
+
+      <div class="footer-details">
+        <div class="footer-copyright">
+        Copyright © By Lahiru Lakshan<br>
+        2020 by Premier League
+        </div>
+        <div class="vertical-line"></div>
+        <div class="footer-icon">Premier <span class="logo"><img  class="logo" src="./assets/images/premier-league-icon.png"></span> League</div>
+      </div>
+    </footer>
+</body>

@@ -1,0 +1,15 @@
+
+  <mat-toolbar class="sticky fixed-top" [style]="navBackground" >
+    <div class="icon-background" [style]="background"> <img class="icon" src="./assets/images/premier-league-icon.png"></div>
+    <div><span class="title-shine">Premier League</span></div>
+
+
+    <div class="spacer"></div>
+    <a  id ="home" class="hover-border shine" [style]="color"  (click)="navColorChange('color:white','background-color: white','white')" mat-button routerLink="home-page"><div class="align">Home</div></a>
+    <a class="hover-border shine" [style]="color"  (click)="navColorChange('color:#04f5ff','background-color: #04f5ff', '#04f5ff')" mat-button routerLink="ranking-table"><div class="align">Ranking Table</div></a>
+    <a class="hover-border shine" [style]="color" (click)="navColorChange('color:#e90052','background-color: #e90052', '#e90052')" mat-button routerLink="all-matches-table"><div class="align">All Matches</div></a>
+    <a class="hover-border shine" [style]="color"  (click)="navColorChange('color:#00ff85','background-color: #00ff85', '#00ff85')" mat-button routerLink="random-matches-table"><div class="align">Random Play</div></a>
+  </mat-toolbar>
+<div>
+  <router-outlet></router-outlet>
+</div>
